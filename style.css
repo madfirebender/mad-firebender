@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+:root {
+    --Light-red: hsl(0, 100%, 96%);
+    --Orangey-light-yellow: hsl(39, 100%, 96%);
+    --Green-light-teal: hsl(166, 100%, 96%);
+    --Cobalt-light-blue: hsl(234, 85%, 96%);
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue: rgb(69, 37, 196);
+    --Persian-blue: rgb(66, 50, 223);
+
+    --light-gray: rgba(140, 147, 152, 0.829);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    --Red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+}
+
+body {
+    height: 100vh;
+    font-family: "Hanken Grotesk";
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+div.big-box {
+    margin: auto;
+    width: 40%;
+    height: auto;
+    transform: translateY(50%);
+    background-color: white;
+    box-shadow: 5px 10px 10px var(--Pale-blue);
+    border-radius: 1.5rem;
+    max-width: 50%;
+    min-width: 35rem;
+}
+
+
+div.big-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+div.small-box1 {
+    display: block;
+    text-align: center;
+    padding: 25px;
+    color: white;
+    background-image: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 1.5rem;
+}
+
+div.small-box1 > p{
+    padding: 12px 28px;
+}
+
+div.small-box1 div.round-box {
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 150px;
+    background-image: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+}
+
+div.round-box {
+    margin: auto;
+    text-align: center;
+}
+
+div.small-box2 {
+    display: block;
+    padding: 12px 28px;
+}
+
+.big-ul {
+    display: block;
+}
+
+.small-ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 7px 10px;
+    margin: 15px;
+}
+
+.small-ul2 {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    border-radius: 16px;
+    width: 100%;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    background-color: var(--Dark-gray-blue);
+    margin: 15px 15px 0 0;
+    padding: 12px;
+}
+
+button:hover {
+    transition: 2s all ease 3s;
+    background-image: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+.spanS {
+    padding: 12px 28px 12px 0;
+    margin: 0 15px;
+}
+
+.spanG {
+    font-size: 1.5rem;
+}
+
+.spanS {
+    font-size: 1.1rem;
+    color: var(--Dark-gray-blue)
+}
+
+span.number {
+    font-family: "Hanken Grotesk";
+    font-weight: 800;
+    font-size: 3rem;
+    color: white;
+}
+
+p.number, .spanR, .paragraph {
+    color: var(--Light-lavender);
+}
+
+p.paragraph {
+    font-size: 0.8rem;
+}
+
+#reaction {
+    background-color: var(--Light-red);
+}
+
+#memory {
+    background-color: var(--Orangey-light-yellow);
+}
+
+#verbal {
+    background-color: var(--Green-light-teal);
+}
+
+#visual {
+    background-color: var(--Cobalt-light-blue);
+}
+
+#reaction ul.small-ul2 li:nth-of-type(2) {
+    color: var(--Red);
+}
+
+#memory ul.small-ul2 li:nth-of-type(2) {
+    color: var(--Orangey-yellow);
+}
+
+#verbal ul.small-ul2 li:nth-of-type(2) {
+    color: var(--Green-teal);
+}
+
+#visual ul.small-ul2 li:nth-of-type(2) {
+    color: var(--Cobalt-blue);
+}
+
+.small-ul span{
+    color: var(--light-gray);
+}
+
+.small-ul li {
+    color: var(--Dark-gray-blue)
+}
+
+/* Mobile design */
+@media(max-width: 630px) {
+    div.big-box{
+        display: block;
+        transform: translateY(0);
+    } 
+
+    div.big-box {
+        border-radius: 0;
+        box-shadow: none;
+        min-width: 100%;
+    }
+
+    div.small-box1 {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
